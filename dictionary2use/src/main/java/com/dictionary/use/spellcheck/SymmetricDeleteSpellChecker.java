@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Symmetric Delete Spelling Correction algorithm implementation.
  */
-public class SymSpellImpl implements SymSpell {
+public class SymmetricDeleteSpellChecker implements SpellCorrectionEngine {
 
     private final int maxDictionaryEditDistance;
     private final int prefixLength;
@@ -28,20 +28,13 @@ public class SymSpellImpl implements SymSpell {
     private final Map<String, Long> unigramLexicon;
     private final StringDistance stringDistance;
     private int maxDictionaryWordLength;
-    private long n;
 
-    public SymSpellImpl(SymSpellBuilder builder) {
+    public SymmetricDeleteSpellChecker(SpellCheckerBuilder builder) {
         this.unigramLexicon = new ConcurrentHashMap<>(builder.getUnigramLexicon());
         this.maxDictionaryEditDistance = builder.getMaxDictionaryEditDistance();
         this.prefixLength = builder.getPrefixLength();
         this.bigramLexicon = new ConcurrentHashMap<>(builder.getBigramLexicon());
         this.stringDistance = builder.getStringDistanceAlgorithm();
-
-        long sum = 0;
-        for (Long val : unigramLexicon.values()) {
-            if (val != null) sum += val;
-        }
-        this.n = sum;
 
         for (String word : unigramLexicon.keySet()) {
             addDeletes(word);
@@ -71,10 +64,8 @@ public class SymSpellImpl implements SymSpell {
         Long existingFreq = unigramLexicon.get(cleaned);
         if (existingFreq != null) {
             unigramLexicon.put(cleaned, existingFreq + frequency);
-            n += frequency;
         } else {
             unigramLexicon.put(cleaned, frequency);
-            n += frequency;
             if (cleaned.length() > maxDictionaryWordLength) {
                 maxDictionaryWordLength = cleaned.length();
             }

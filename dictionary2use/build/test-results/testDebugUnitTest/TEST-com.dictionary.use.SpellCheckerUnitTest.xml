@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dictionary.use.SpellCheckerUnitTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-18T08:36:34.658Z" hostname="LAKI-LAPTOP" time="0.017">
+  <properties/>
+  <testcase name="testTranspositionCorrection" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.001"/>
+  <testcase name="testDynamicWordAddition" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.003"/>
+  <testcase name="testExactLookup" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.003"/>
+  <testcase name="testDamerauLevenshteinOSA" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.003"/>
+  <testcase name="testUninitializedThrowsException" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.003"/>
+  <testcase name="testLookupCompound" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.001"/>
+  <testcase name="testTypoCorrection" classname="com.dictionary.use.SpellCheckerUnitTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

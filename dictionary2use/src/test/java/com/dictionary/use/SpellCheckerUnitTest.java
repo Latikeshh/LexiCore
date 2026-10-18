@@ -1,7 +1,7 @@
 package com.dictionary.use;
 
-import com.dictionary.use.spellcheck.SymSpell;
-import com.dictionary.use.spellcheck.SymSpellBuilder;
+import com.dictionary.use.spellcheck.SpellCorrectionEngine;
+import com.dictionary.use.spellcheck.SpellCheckerBuilder;
 import com.dictionary.use.spellcheck.Verbosity;
 import com.dictionary.use.spellcheck.api.DamerauLevenshteinOSA;
 import com.dictionary.use.spellcheck.api.SuggestItem;
@@ -17,14 +17,13 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 /**
- * Unit tests for the extracted SymSpell implementation.
+ * Unit tests for the extracted spellchecking implementation.
  */
-public class SymSpellUnitTest {
+public class SpellCheckerUnitTest {
 
-    private SymSpell symSpell;
+    private SpellCorrectionEngine spellChecker;
 
     @Before
     public void setUp() {
@@ -35,17 +34,17 @@ public class SymSpellUnitTest {
         lexicon.put("android", 95L);
         lexicon.put("the", 500L);
 
-        SymSpellBuilder builder = new SymSpellBuilder()
+        SpellCheckerBuilder builder = new SpellCheckerBuilder()
                 .setMaxDictionaryEditDistance(2)
                 .setPrefixLength(7)
                 .setUnigramLexicon(lexicon);
 
-        symSpell = builder.createSymSpell();
+        spellChecker = builder.createSpellChecker();
     }
 
     @Test
     public void testExactLookup() throws Exception {
-        List<SuggestItem> items = symSpell.lookup("computer", Verbosity.TOP);
+        List<SuggestItem> items = spellChecker.lookup("computer", Verbosity.TOP);
         assertNotNull(items);
         assertFalse(items.isEmpty());
         assertEquals("computer", items.get(0).getSuggestion());
@@ -54,7 +53,7 @@ public class SymSpellUnitTest {
 
     @Test
     public void testTypoCorrection() throws Exception {
-        List<SuggestItem> items = symSpell.lookup("compter", Verbosity.CLOSEST);
+        List<SuggestItem> items = spellChecker.lookup("compter", Verbosity.CLOSEST);
         assertNotNull(items);
         assertFalse(items.isEmpty());
         assertEquals("computer", items.get(0).getSuggestion());
@@ -63,7 +62,7 @@ public class SymSpellUnitTest {
 
     @Test
     public void testTranspositionCorrection() throws Exception {
-        List<SuggestItem> items = symSpell.lookup("teh", Verbosity.TOP);
+        List<SuggestItem> items = spellChecker.lookup("teh", Verbosity.TOP);
         assertNotNull(items);
         assertFalse(items.isEmpty());
         assertEquals("the", items.get(0).getSuggestion());
@@ -85,8 +84,8 @@ public class SymSpellUnitTest {
 
     @Test
     public void testDynamicWordAddition() throws Exception {
-        symSpell.addWord("newcustomword", 50L);
-        List<SuggestItem> items = symSpell.lookup("newcustomword", Verbosity.TOP);
+        spellChecker.addWord("newcustomword", 50L);
+        List<SuggestItem> items = spellChecker.lookup("newcustomword", Verbosity.TOP);
         assertNotNull(items);
         assertFalse(items.isEmpty());
         assertEquals("newcustomword", items.get(0).getSuggestion());
@@ -94,7 +93,7 @@ public class SymSpellUnitTest {
 
     @Test
     public void testLookupCompound() throws Exception {
-        List<SuggestItem> compound = symSpell.lookupCompound("compter teh", 2, true);
+        List<SuggestItem> compound = spellChecker.lookupCompound("compter teh", 2, true);
         assertNotNull(compound);
         assertEquals(2, compound.size());
         assertEquals("computer", compound.get(0).getSuggestion());
@@ -103,7 +102,7 @@ public class SymSpellUnitTest {
 
     @Test(expected = NotInitializedException.class)
     public void testUninitializedThrowsException() throws Exception {
-        SymSpell emptySpell = new SymSpellBuilder().createSymSpell();
-        emptySpell.lookup("test", Verbosity.TOP);
+        SpellCorrectionEngine emptyChecker = new SpellCheckerBuilder().createSpellChecker();
+        emptyChecker.lookup("test", Verbosity.TOP);
     }
 }

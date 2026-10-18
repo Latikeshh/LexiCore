@@ -11,7 +11,7 @@
 
 - ⚡ **Offline-First B-Tree Indexed Lookup**: Fast local lookups with zero network requests using SQLite.
 - 🔍 **Prefix Autocompletion & Next-Word Prediction**: Instant phrase predictions for keyboard search and input methods.
-- 🔤 **SymSpell Spelling Correction**: Symmetric Delete algorithm for fast, low-memory typo correction.
+- 🔤 **Symmetric Delete Spelling Correction**: Symmetric Delete algorithm for fast, low-memory typo correction.
 - ☁️ **Secure Over-The-Air (OTA) Updates**: Secure background dataset downloads with SHA-256 checksum verification and atomic database swapping.
 - 📦 **Zero Hardcoded Word Bloat**: Keeps code clean and lightweight.
 

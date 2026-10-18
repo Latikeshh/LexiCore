@@ -1,6 +1,6 @@
 package com.dictionary.use;
 
-import com.dictionary.use.engine.SymSpellEngine;
+import com.dictionary.use.engine.DictionarySpellEngine;
 import com.dictionary.use.models.DictionaryResult;
 import com.dictionary.use.models.DictionaryStatus;
 import com.dictionary.use.models.UpdateCheckResult;
@@ -126,17 +126,17 @@ public class Dictionary2UseUnitTest {
     }
 
     @Test
-    public void testSymSpellDamerauLevenshteinDistance() {
-        int dist = SymSpellEngine.damerauLevenshteinDistance("compter", "computer");
+    public void testSpellCheckerDamerauLevenshteinDistance() {
+        int dist = DictionarySpellEngine.damerauLevenshteinDistance("compter", "computer");
         assertEquals(1, dist);
 
-        int dist2 = SymSpellEngine.damerauLevenshteinDistance("teh", "the");
+        int dist2 = DictionarySpellEngine.damerauLevenshteinDistance("teh", "the");
         assertEquals(1, dist2);
     }
 
     @Test
-    public void testSymSpellSuggestions() {
-        SymSpellEngine engine = new SymSpellEngine(2);
+    public void testSpellCheckerSuggestions() {
+        DictionarySpellEngine engine = new DictionarySpellEngine(2);
         engine.addWord("computer", 100);
         engine.addWord("commuter", 90);
 

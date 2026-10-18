@@ -7,7 +7,7 @@ import android.os.Looper;
 import com.dictionary.use.engine.OnlineUpdateManager;
 import com.dictionary.use.engine.SQLiteDictionaryStore;
 import com.dictionary.use.engine.StarterDatasetInstaller;
-import com.dictionary.use.engine.SymSpellEngine;
+import com.dictionary.use.engine.DictionarySpellEngine;
 import com.dictionary.use.models.DictionaryResult;
 import com.dictionary.use.models.DictionaryStatus;
 import com.dictionary.use.models.LookupCallback;
@@ -28,7 +28,7 @@ import java.util.concurrent.Executors;
 public final class Dictionary2Use {
     private final Context context;
     private final IDictionaryProvider provider;
-    private final SymSpellEngine symSpellEngine;
+    private final DictionarySpellEngine spellEngine;
     private final OnlineUpdateManager updateManager;
     private final ExecutorService executor;
     private final Handler mainHandler;
@@ -48,18 +48,18 @@ public final class Dictionary2Use {
             this.provider = store;
         }
 
-        this.symSpellEngine = new SymSpellEngine(2);
+        this.spellEngine = new DictionarySpellEngine(2);
         this.updateManager = new OnlineUpdateManager(this.context, builder.datasetUrl);
 
-        // Warm up SymSpell engine asynchronously with top starter words
-        executor.execute(this::warmupSymSpell);
+        // Warm up spell engine asynchronously with top starter words
+        executor.execute(this::warmupSpellEngine);
     }
 
-    private void warmupSymSpell() {
+    private void warmupSpellEngine() {
         if (provider != null) {
             List<DictionaryResult> topWords = provider.searchPrefix("", 1000);
             for (DictionaryResult res : topWords) {
-                symSpellEngine.addWord(res.getQueryWord(), res.getFrequency());
+                spellEngine.addWord(res.getQueryWord(), res.getFrequency());
             }
         }
     }
@@ -77,7 +77,7 @@ public final class Dictionary2Use {
 
         if (!result.isFound()) {
             // Find fuzzy spelling suggestions if exact word not found
-            List<String> suggestions = symSpellEngine.lookupSuggestions(cleaned, 2, 5);
+            List<String> suggestions = spellEngine.lookupSuggestions(cleaned, 2, 5);
             return DictionaryResult.notFound(cleaned, suggestions);
         }
 
@@ -118,7 +118,7 @@ public final class Dictionary2Use {
      * Synchronous spelling correction lookup.
      */
     public List<String> getSpellingSuggestionsSync(String queryWord, int maxEditDistance) {
-        return symSpellEngine.lookupSuggestions(queryWord, maxEditDistance, 5);
+        return spellEngine.lookupSuggestions(queryWord, maxEditDistance, 5);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class Dictionary2Use {
         if (word == null || word.trim().isEmpty()) return;
         executor.execute(() -> {
             provider.learnWord(word.trim(), 1);
-            symSpellEngine.addWord(word.trim(), 1);
+            spellEngine.addWord(word.trim(), 1);
         });
     }
 

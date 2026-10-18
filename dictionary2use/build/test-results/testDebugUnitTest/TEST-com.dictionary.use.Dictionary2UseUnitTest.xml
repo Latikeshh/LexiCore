@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dictionary.use.Dictionary2UseUnitTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-18T08:31:26.328Z" hostname="LAKI-LAPTOP" time="0.043">
+<testsuite name="com.dictionary.use.Dictionary2UseUnitTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-18T08:36:34.616Z" hostname="LAKI-LAPTOP" time="0.031">
   <properties/>
-  <testcase name="testStatusAndVersion" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.005"/>
-  <testcase name="testSymSpellSuggestions" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.015"/>
-  <testcase name="testSymSpellDamerauLevenshteinDistance" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.002"/>
-  <testcase name="testPhrasePredictions" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
-  <testcase name="testUnknownWordReturnsNotFound" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
-  <testcase name="testUppercaseAndWhitespaceHandling" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.0"/>
+  <testcase name="testSpellCheckerSuggestions" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.01"/>
+  <testcase name="testStatusAndVersion" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.0"/>
+  <testcase name="testPhrasePredictions" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.002"/>
+  <testcase name="testUnknownWordReturnsNotFound" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.002"/>
+  <testcase name="testUppercaseAndWhitespaceHandling" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
   <testcase name="testKnownWordLookup" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
-  <testcase name="testUpdateCheckNoUpdate" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.003"/>
+  <testcase name="testUpdateCheckNoUpdate" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.002"/>
+  <testcase name="testSpellCheckerDamerauLevenshteinDistance" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

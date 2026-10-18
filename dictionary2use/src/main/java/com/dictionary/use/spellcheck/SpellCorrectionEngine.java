@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Public SymSpell interface for spelling suggestions and compound phrase lookups.
+ * Public spell correction interface for suggestions and compound phrase lookups.
  */
-public interface SymSpell {
+public interface SpellCorrectionEngine {
 
     List<SuggestItem> lookup(String input, Verbosity verbosity, boolean includeUnknown) throws NotInitializedException;
 
