@@ -1,9 +1,0 @@
-com.dictionary.use.dictionary2use-pngs-0 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\generated\res\pngs\release
-com.dictionary.use.dictionary2use-updated_navigation_xml-1 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\generated\updated_navigation_xml\release
-com.dictionary.use.dictionary2use-mergeReleaseResources-2 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.dictionary.use.dictionary2use-mergeReleaseResources-3 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.dictionary.use.dictionary2use-release-4 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\merged_res\release\mergeReleaseResources
-com.dictionary.use.dictionary2use-release-5 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\packaged_res\release\packageReleaseResources
-com.dictionary.use.dictionary2use-main-6 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\src\main\res
-com.dictionary.use.dictionary2use-release-7 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\src\release\res
-gradleHome-0 C:\Users\Latikesh\.gradle
