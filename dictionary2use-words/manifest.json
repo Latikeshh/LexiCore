@@ -1,0 +1,12 @@
+{
+  "version": "2026.10.18",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "word_count": 1250,
+  "phrase_count": 85,
+  "size_bytes": 142000,
+  "download_url": "https://github.com/Latikeshh/dictionary2use-words/releases/download/v2026.10.18/dictionary2use.db",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "release_notes": "Initial release of Dictionary2Use English, Hinglish, Person Names, and N-gram Phrase Datasets.",
+  "languages": ["English", "Hinglish", "Hindi", "Marathi"],
+  "license": "Apache-2.0"
+}

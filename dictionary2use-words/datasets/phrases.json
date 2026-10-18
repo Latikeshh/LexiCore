@@ -1,0 +1,11 @@
+[
+  { "prev_word": "good", "next_word": "morning", "score": 30 },
+  { "prev_word": "good", "next_word": "night", "score": 28 },
+  { "prev_word": "good", "next_word": "luck", "score": 25 },
+  { "prev_word": "thank", "next_word": "you", "score": 35 },
+  { "prev_word": "android", "next_word": "developer", "score": 20 },
+  { "prev_word": "android", "next_word": "studio", "score": 18 },
+  { "prev_word": "computer", "next_word": "science", "score": 25 },
+  { "prev_word": "bhai", "next_word": "call", "score": 15 },
+  { "prev_word": "shubh", "next_word": "ratri", "score": 20 }
+]

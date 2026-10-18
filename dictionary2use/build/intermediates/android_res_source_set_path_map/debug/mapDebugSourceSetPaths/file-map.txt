@@ -1,0 +1,9 @@
+com.dictionary.use.dictionary2use-pngs-0 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\generated\res\pngs\debug
+com.dictionary.use.dictionary2use-updated_navigation_xml-1 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\generated\updated_navigation_xml\debug
+com.dictionary.use.dictionary2use-mergeDebugResources-2 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.dictionary.use.dictionary2use-mergeDebugResources-3 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.dictionary.use.dictionary2use-debug-4 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\merged_res\debug\mergeDebugResources
+com.dictionary.use.dictionary2use-debug-5 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\build\intermediates\packaged_res\debug\packageDebugResources
+com.dictionary.use.dictionary2use-debug-6 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\src\debug\res
+com.dictionary.use.dictionary2use-main-7 C:\Users\Latikesh\AndroidStudioProjects\Dictionary2Use\dictionary2use\src\main\res
+gradleHome-0 C:\Users\Latikesh\.gradle

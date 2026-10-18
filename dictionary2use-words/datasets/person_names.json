@@ -1,0 +1,10 @@
+[
+  { "word": "ahmed", "frequency": 50, "category": "PersonName" },
+  { "word": "arjun", "frequency": 45, "category": "PersonName" },
+  { "word": "rahul", "frequency": 40, "category": "PersonName" },
+  { "word": "priya", "frequency": 40, "category": "PersonName" },
+  { "word": "neha", "frequency": 35, "category": "PersonName" },
+  { "word": "amit", "frequency": 35, "category": "PersonName" },
+  { "word": "sara", "frequency": 30, "category": "PersonName" },
+  { "word": "john", "frequency": 30, "category": "PersonName" }
+]

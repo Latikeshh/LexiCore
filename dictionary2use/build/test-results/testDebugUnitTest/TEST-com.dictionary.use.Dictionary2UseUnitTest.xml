@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dictionary.use.Dictionary2UseUnitTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-18T08:08:40.432Z" hostname="LAKI-LAPTOP" time="0.075">
+  <properties/>
+  <testcase name="testStatusAndVersion" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.019"/>
+  <testcase name="testSymSpellSuggestions" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.009"/>
+  <testcase name="testSymSpellDamerauLevenshteinDistance" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
+  <testcase name="testPhrasePredictions" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
+  <testcase name="testUnknownWordReturnsNotFound" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
+  <testcase name="testUppercaseAndWhitespaceHandling" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.0"/>
+  <testcase name="testKnownWordLookup" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.001"/>
+  <testcase name="testUpdateCheckNoUpdate" classname="com.dictionary.use.Dictionary2UseUnitTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

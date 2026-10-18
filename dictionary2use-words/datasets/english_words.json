@@ -1,0 +1,12 @@
+[
+  { "word": "computer", "frequency": 120, "definition": "An electronic device for storing and processing data.", "synonyms": "pc,laptop,workstation", "category": "Technology" },
+  { "word": "dictionary", "frequency": 115, "definition": "A reference book or online resource containing words and meanings.", "synonyms": "lexicon,vocabulary,wordbook", "category": "General" },
+  { "word": "android", "frequency": 110, "definition": "An open-source mobile operating system developed by Google.", "synonyms": "mobile,os", "category": "Technology" },
+  { "word": "java", "frequency": 105, "definition": "A high-level, class-based, object-oriented programming language.", "synonyms": "code,language", "category": "Technology" },
+  { "word": "keyboard", "frequency": 100, "definition": "An input device consisting of keys used to type text.", "synonyms": "keypad,input", "category": "Technology" },
+  { "word": "application", "frequency": 90, "definition": "A program or piece of software designed for end-users.", "synonyms": "app,program,software", "category": "Technology" },
+  { "word": "library", "frequency": 85, "definition": "A collection of resources or code modules.", "synonyms": "repository,archive", "category": "General" },
+  { "word": "developer", "frequency": 80, "definition": "A person that creates software applications or systems.", "synonyms": "engineer,programmer", "category": "Technology" },
+  { "word": "system", "frequency": 75, "definition": "A set of principles or procedures according to which something is done.", "synonyms": "network,structure", "category": "General" },
+  { "word": "software", "frequency": 70, "definition": "Programs and other operating information used by a computer.", "synonyms": "app,code", "category": "Technology" }
+]

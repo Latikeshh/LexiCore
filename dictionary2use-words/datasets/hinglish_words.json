@@ -1,0 +1,10 @@
+[
+  { "word": "bolna", "frequency": 40, "definition": "To speak or talk in Hindi/Hinglish.", "category": "Hinglish" },
+  { "word": "kar", "frequency": 50, "definition": "To do or perform an action.", "category": "Hinglish" },
+  { "word": "karna", "frequency": 45, "definition": "Doing or performing.", "category": "Hinglish" },
+  { "word": "ahe", "frequency": 35, "definition": "Is or present in Marathi.", "category": "Marathi" },
+  { "word": "namaste", "frequency": 60, "definition": "A customary respectful Hindu greeting.", "category": "Hinglish" },
+  { "word": "dhanyavad", "frequency": 55, "definition": "Thank you in Hindi/Marathi.", "category": "Hinglish" },
+  { "word": "swagat", "frequency": 30, "definition": "Welcome in Hindi/Marathi.", "category": "Hinglish" },
+  { "word": "mitra", "frequency": 25, "definition": "Friend in Hindi/Marathi.", "category": "Hinglish" }
+]
